@@ -1,0 +1,25 @@
+<!--
+ * @Description: defineProperty 方式
+ * @Author: 吾昂王
+ * @Date: 2024-01-05 16:50:03
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body></body>
+    <script>
+        let obj = {};
+        Object.defineProperty(obj, 'name', {
+            get() {
+                console.log('get');
+            },
+            set() {
+                console.log('set');
+            },
+        });
+    </script>
+</html>

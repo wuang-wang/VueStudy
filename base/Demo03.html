@@ -1,0 +1,28 @@
+<!--
+ * @Description: Proxy 方式
+ * @Author: 吾昂王
+ * @Date: 2024-01-05 16:50:03
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body></body>
+    <script>
+        var obj = {};
+        // ES6 Proxy
+        var vm = new Proxy(obj, {
+            get(obj, key) {
+                console.log('🚀 ~ file: Demo03.html:18 ~ get ~ get:', get);
+                return obj[key];
+            },
+            set(obj, key, val) {
+                console.log('🚀 ~ file: Demo03.html:22 ~ set ~ set:', set);
+                obj[key] = val;
+            },
+        });
+    </script>
+</html>
