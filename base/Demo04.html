@@ -1,0 +1,37 @@
+<!--
+ * @Description: 模糊搜索案例
+ * @Author: 吾昂王
+ * @Date: 2024-01-09 15:59:13
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <body>
+        <div id="box">
+            <input type="text" v-model="myText" />
+            <ul>
+                <li v-for="data in filterList()" :key="data">{{data}}</li>
+            </ul>
+        </div>
+    </body>
+    <script>
+        var obj = {
+            data() {
+                return {
+                    myText: '',
+                    dataList: ['aaa', 'abb', 'aab', 'bcc', 'abc', 'bcd', 'add', 'acd'],
+                };
+            },
+            methods: {
+                filterList(evt) {
+                    return this.dataList.filter((item) => item.includes(this.myText));
+                },
+            },
+        };
+        Vue.createApp(obj).mount('#box');
+    </script>
+</html>
