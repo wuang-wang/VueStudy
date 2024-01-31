@@ -11,7 +11,7 @@ const routes = [
     },
     {
         // webpackChunkName 是为预加载的文件取别名,作用就是webpack在打包的时候，对异步引入的库代码（lodash）进行代码分割时（需要配置webpack的SplitChunkPlugin插件），为分割后的代码块取得名字
-        path: '/detail:/id',
+        path: '/detail/:id',
         component: () => import(/*webpackChunkName: 'group-detail'*/ '../views/Detail.vue'),
     },
     {

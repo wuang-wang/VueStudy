@@ -12,3 +12,15 @@ export default {
     name: 'App',
 };
 </script>
+
+<style lang="scss">
+html,body{
+    min-height: 100%;
+    overflow-x: hidden;
+    background: #F4F4F4;
+}
+#app{
+    margin: 0 auto;
+    background: #FFF;
+}
+</style>
